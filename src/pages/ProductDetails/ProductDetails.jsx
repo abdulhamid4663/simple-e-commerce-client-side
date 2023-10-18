@@ -5,6 +5,7 @@ import { GiCirclingFish } from "react-icons/gi";
 import { BsGlobe2 } from "react-icons/bs";
 import { RiRefund2Fill } from "react-icons/ri";
 import { HiShoppingBag } from "react-icons/hi2";
+import Swal from 'sweetalert2'
 
 
 const ProductDetails = () => {
@@ -12,7 +13,23 @@ const ProductDetails = () => {
     const { name, brand, price, description, rating, image } = loadedProduct
 
     const handleAddToCart = () => {
-        
+        fetch("http://localhost:5100/cart", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(loadedProduct)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                Swal.fire({
+                    title: 'Success!',
+                    text: 'Product Added to Cart Successfully',
+                    icon: 'success',
+                    confirmButtonText: 'OK'
+                })
+            })
     }
 
 
@@ -40,7 +57,7 @@ const ProductDetails = () => {
                     <div className="flex flex-col min-h-[400px] gap-6">
                         <div className="flex-grow max-w-sm mt-6">
                             <button onClick={handleAddToCart} className="btn w-full bg-[#0F172A] text-white font-bold">
-                                <HiShoppingBag className="text-xl"/>
+                                <HiShoppingBag className="text-xl" />
                                 Add to Cart
                             </button>
                         </div>
