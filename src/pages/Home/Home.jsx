@@ -10,7 +10,7 @@ const Home = () => {
                     <div className="container mx-auto px-4">
                         <div className="hero min-h-[700px]">
                             <div className="hero-content p-0 flex-col-reverse lg:flex-row-reverse min-h-[700px]">
-                                <img src="/girl.png" className="lg:h-[700px]" />
+                                <img src="https://i.ibb.co/nLVD4Ph/girl.png" className="lg:h-[700px]" />
                                 <div className="py-12 lg:py-0">
                                     <h1 className="text-xl font-semibold text-[#334155]">Just In! 🛍️</h1>
                                     <p className="py-6 text-2xl md:text-3xl lg:text-5xl font-bold text-[#0F172A] leading-snug">Discover our newest arrivals. Shop now!</p>
@@ -22,8 +22,6 @@ const Home = () => {
                                     </button>
                                 </div>
                             </div>
-                            {/* Steal the Deals Massive Discounts Await You! */}
-                            {/* 🔥 Limited Time Offer <br />Get Up to <span className="text-[#FF6650]">50%</span> Off on Your Favorite Styles! Shop Now and Save Big! */}
                         </div>
                     </div>
                 </div>
@@ -84,7 +82,7 @@ const Home = () => {
                                     Home & Kitchen Essentials
                                 </span>
                                 <h4 className="text-2xl font-semibold text-[#0F172A] flex-grow lg:mt-6">Upgrade Your Space with Our Selection.</h4>
-                                <Link className="max-w-fit">
+                                <Link to="/homeKitchen" className="max-w-fit">
                                     <button className="btn bg-white text-[#0F172A] normal-case">Show me all</button>
                                 </Link>
                             </div>

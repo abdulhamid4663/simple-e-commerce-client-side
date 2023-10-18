@@ -23,8 +23,6 @@ const ClothingCollection = () => {
                     <Slider />
                 </div>
             </div>
-
-
         </div>
     );
 };
