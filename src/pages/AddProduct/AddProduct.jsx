@@ -1,6 +1,9 @@
+import { useState } from "react";
 
 
 const AddProduct = () => {
+    const [selected, setSelected] = useState('')
+
 
     const handleOnSubmit = e => {
         e.preventDefault();
@@ -10,15 +13,20 @@ const AddProduct = () => {
         const price = form.price.value;
         const description = form.description.value;
         const rating = form.rating.value;
-        const type = form.type.selected;
-        const gender = form.gender.selected;
+        const type = selected;
         const image = form.image.value;
 
-        console.log(name, brand, price, description, rating, type, gender, image)
+        const newProduct = { name, brand, price, description, rating, type, image };
+
+        console.log(newProduct)
+    }
+
+    const handleOnChange = e => {
+        setSelected(e.target.value)
     }
 
     return (
-        <div className="container mx-auto px-4 mt-16">
+        <div className="container mx-auto px-4 my-28">
             <div>
                 <h1 className="text-[#0F172A] text-4xl">Add Product</h1>
             </div>
@@ -62,18 +70,14 @@ const AddProduct = () => {
                         <div className="lg:flex-1">
                             <div className="flex flex-wrap items-center gap-6">
                                 <div className="lg:flex-1">
-                                    <select name="type" className="select select-ghost w-full">
+                                    <select onChange={handleOnChange} name="type" className="select select-ghost w-full">
                                         <option disabled selected>Select the Type</option>
-                                        <option>Clothing</option>
-                                        <option>Shoes</option>
-                                        <option>Watch</option>
-                                    </select>
-                                </div>
-                                <div className="lg:flex-1">
-                                    <select name="gender" className="select select-ghost w-full">
-                                        <option disabled selected>Select Gender</option>
-                                        <option>Men</option>
-                                        <option>Women</option>
+                                        <option value="Clothing">Clothing</option>
+                                        <option value="Shoes">Shoes</option>
+                                        <option value="Glasses">Glasses</option>
+                                        <option value="Home & Kitchen">Home & Kitchen</option>
+                                        <option value="Electronics">Electronics</option>
+                                        <option value="Gaming accessories">Gaming accessories</option>
                                     </select>
                                 </div>
                             </div>
