@@ -31,7 +31,11 @@ const Header = () => {
                                 {navLinks}
                             </ul>
                         </div>
-                        <Link to="/" className=" normal-case text-xl">Diyafah</Link>
+                        <Link to="/" className=" normal-case text-xl flex items-center gap-4 font-semibold text-[#6B7280]">
+                            <div className="w-[30px]">
+                                <img src="/logo.png" alt="" />
+                            </div>
+                            Diyafah</Link>
                     </div>
                     <div className="navbar-center hidden lg:flex">
                         <ul className="menu menu-horizontal px-1">
