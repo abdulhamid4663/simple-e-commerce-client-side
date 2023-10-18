@@ -3,9 +3,9 @@ import ProductsCards from "../../components/ProductsCards/ProductsCards";
 import Slider from "../../components/Slider/Slider";
 
 
-const EyewearCollection = () => {
+const Electronics = () => {
     const loadedProducts = useLoaderData()
-    const filterProducts = loadedProducts.filter(product => product?.type === "Glasses")
+    const filterProducts = loadedProducts.filter(product => product?.type === "Electronics")
 
     return (
         <div className="container mx-auto px-4 my-[120px]">
@@ -27,4 +27,4 @@ const EyewearCollection = () => {
     );
 };
 
-export default EyewearCollection;
+export default Electronics;

@@ -7,6 +7,7 @@ import ShoeShowcase from "../../pages/ShoeShowcase/ShoeShowcase";
 import ProductDetails from "../../pages/ProductDetails/ProductDetails";
 import EyewearCollection from "../../pages/EyewearCollection/EyewearCollection";
 import HomeKitchen from "../../pages/HomeKitchen/HomeKitchen";
+import Electronics from "../../pages/Electornics/Electronics";
 
 const router = createBrowserRouter([
     {
@@ -39,6 +40,11 @@ const router = createBrowserRouter([
             {
                 path: "/homeKitchen",
                 element: <HomeKitchen />,
+                loader: () => fetch("http://localhost:5100/products"),
+            },
+            {
+                path: "/electronics",
+                element: <Electronics />,
                 loader: () => fetch("http://localhost:5100/products"),
             },
             {
