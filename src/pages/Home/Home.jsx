@@ -5,7 +5,7 @@ const Home = () => {
     return (
         <div>
             {/* Banner Section */}
-            <div className="bg-gradient-to-b from-green-100 to-green-50">
+            <div className="bg-gradient-to-b from-orange-100 to-orange-50">
                 <div className="bg-cover bg-center" style={{ backgroundImage: "url(/shapes.svg)" }}>
                     <div className="container mx-auto px-4">
                         <div className="hero min-h-[700px]">
@@ -110,7 +110,7 @@ const Home = () => {
                                     Gaming accessories
                                 </span>
                                 <h4 className="text-2xl font-semibold text-[#0F172A] flex-grow lg:mt-6">Level Up Your Gaming Experience Here.</h4>
-                                <Link className="max-w-fit">
+                                <Link to="/gamingAccessories" className="max-w-fit">
                                     <button className="btn bg-white text-[#0F172A] normal-case">Show me all</button>
                                 </Link>
                             </div>
@@ -118,53 +118,6 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
-                {/* <div className="carousel rounded-box mt-12 flex-wrap gap-6">
-                    <div className="carousel-item bg-red-50 rounded-xl">
-                        <div className="flex p-7 w-full justify-between ">
-                            <div className="flex flex-col max-w-xs">
-                                <span className="text-base font-semibold text-[#6B7280]">
-                                    Discover Our Clothing Collection
-                                </span>
-                                <h4 className="text-2xl font-semibold text-[#0F172A] flex-grow mt-10">Elevate Your Style with Our Collection.</h4>
-                                <Link className="max-w-fit">
-                                    <button className="btn bg-white text-[#0F172A] normal-case">Show me all</button>
-                                </Link>
-                            </div>
-                            <img src="https://i.ibb.co/6v304kx/New-Mockups-no-hanger-TShirt-Yellow-transformed.png" alt="Burger" className="w-[200px] md:h-[200px]" />
-                        </div>
-                    </div>
-                    <div className="carousel-item  bg-red-50 rounded-xl">
-                        <div className="carousel-item bg-red-50 rounded-xl">
-                            <div className="flex flex-col lg:flex-row p-7 w-full justify-between ">
-                                <div className="flex flex-col max-w-xs">
-                                    <span className="text-base font-semibold text-[#6B7280]">
-                                        Discover Our Clothing Collection
-                                    </span>
-                                    <h4 className="text-2xl font-semibold text-[#0F172A] flex-grow mt-10">Elevate Your Style with Our Collection.</h4>
-                                    <Link className="max-w-fit">
-                                        <button className="btn bg-white text-[#0F172A] normal-case">Show me all</button>
-                                    </Link>
-                                </div>
-                                <img src="https://i.ibb.co/6v304kx/New-Mockups-no-hanger-TShirt-Yellow-transformed.png" alt="Burger" className="w-[200px] md:h-[200px]" />
-                            </div>
-                        </div>
-                    </div>
-                    <div className="carousel-item  bg-red-50 rounded-xl">
-                        <img src="https://i.ibb.co/6v304kx/New-Mockups-no-hanger-TShirt-Yellow-transformed.png" alt="Burger" className="w-[200px] md:h-[200px]" />
-                    </div>
-                    <div className="carousel-item bg-red-50 rounded-xl">
-                        <img src="https://i.ibb.co/6v304kx/New-Mockups-no-hanger-TShirt-Yellow-transformed.png" alt="Burger" className="w-[200px] md:h-[200px]" />
-                    </div>
-                    <div className="carousel-item bg-red-50 rounded-xl">
-                        <img src="https://i.ibb.co/6v304kx/New-Mockups-no-hanger-TShirt-Yellow-transformed.png" alt="Burger" className="w-[200px] md:h-[200px]" />
-                    </div>
-                    <div className="carousel-item bg-red-50 rounded-xl">
-                        <img src="https://i.ibb.co/6v304kx/New-Mockups-no-hanger-TShirt-Yellow-transformed.png" alt="Burger" className="w-[200px] md:h-[200px]" />
-                    </div>
-                    <div className="carousel-item bg-red-50 rounded-xl">
-                        <img src="https://i.ibb.co/6v304kx/New-Mockups-no-hanger-TShirt-Yellow-transformed.png" alt="Burger" className="w-[200px] md:h-[200px]" />
-                    </div>
-                </div> */}
             </div>
 
         </div>
