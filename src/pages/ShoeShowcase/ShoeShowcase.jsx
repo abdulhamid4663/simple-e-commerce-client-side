@@ -6,7 +6,7 @@ import Slider from "../../components/Slider/Slider";
 const ShoeShowcase = () => {
     const loadedProducts = useLoaderData()
     const filterProducts = loadedProducts.filter(product => product?.type === "Shoes")
-    console.log(filterProducts)
+    
     return (
         <div className="container mx-auto px-4 my-[120px]">
             <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#0F172A]">Step into Style with Shoes. <span className="text-[#6B7280]">Explore Our Footwear Collection</span></h1>

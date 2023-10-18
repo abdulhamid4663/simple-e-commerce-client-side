@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 import { BiSolidStar } from "react-icons/bi";
+import { Link } from 'react-router-dom';
 
 const ProductsCards = ({ product }) => {
-    const { name, brand, price, description, rating, image } = product
-
+    const { _id, name, brand, price, description, rating, image } = product
 
     return (
         <div className="card card-compact">
@@ -19,12 +19,14 @@ const ProductsCards = ({ product }) => {
                         <p className='border-2 py-1 px-2 border-green-500 rounded-lg text-green-500 font-bold'>${price}</p>
                     </div>
                     <div className='flex items-center gap-1'>
-                        <BiSolidStar className='text-yellow-500 text-xl'/>
+                        <BiSolidStar className='text-yellow-500 text-xl' />
                         <p className='text-lg font-semibold text-[#0F172A]'>{rating}</p>
                     </div>
                 </div>
                 <div className="card-actions justify-between mt-6">
-                    <button className="btn bg-[#0F172A] text-white rounded-3xl hover:text-black">Details</button>
+                    <Link to={`/products/${_id}`}>
+                        <button className="btn bg-[#0F172A] text-white rounded-3xl hover:text-black">Details</button>
+                    </Link>
                     <button className="btn bg-[#0F172A] text-white rounded-3xl hover:text-black">Update</button>
                 </div>
             </div>
