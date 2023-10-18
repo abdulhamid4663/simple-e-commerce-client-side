@@ -18,7 +18,17 @@ const AddProduct = () => {
 
         const newProduct = { name, brand, price, description, rating, type, image };
 
-        console.log(newProduct)
+        fetch("http://localhost:5100/products", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(newProduct)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+            })
     }
 
     const handleOnChange = e => {
