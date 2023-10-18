@@ -4,6 +4,7 @@ import { FaShippingFast } from "react-icons/fa";
 import { GiCirclingFish } from "react-icons/gi";
 import { BsGlobe2 } from "react-icons/bs";
 import { RiRefund2Fill } from "react-icons/ri";
+import { HiShoppingBag } from "react-icons/hi2";
 
 
 const ProductDetails = () => {
@@ -12,11 +13,11 @@ const ProductDetails = () => {
     return (
         <div className="container mx-auto px-4 my-[120px] border rounded-xl">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 p-7">
-                <div className="bg-base-200 p-8">
+                <div className="bg-base-200 p-8 flex md:min-h-[500px]">
                     <img src={image} alt="" className="mx-auto" />
                 </div>
                 <div>
-                    <h1 className="text-4xl text-[#0F172A] font-medium">{name}</h1>
+                    <h1 className="text-2xl lg:text-4xl text-[#0F172A] font-medium">{name}</h1>
                     <div className="flex items-center gap-1 py-3">
                         <div className="">
                             <p className="py-1 px-4 border-2 border-green-500 text-base text-green-500 rounded-lg font-bold">${price}</p>
@@ -30,11 +31,14 @@ const ProductDetails = () => {
                     <h2 className="text-[#0F172A] font-semibold mt-4">Brand: <span className="font-normal">{brand}</span></h2>
 
                     <p className="text-[#0F172A] font-semibold mt-4">Description: <span className="font-normal">{description}</span></p>
-                    <div className="flex flex-col min-h-[400px]">
+                    <div className="flex flex-col min-h-[400px] gap-6">
                         <div className="flex-grow max-w-sm mt-6">
-                            <button className="btn w-full bg-[#0F172A] text-white font-bold">Add to Cart</button>
+                            <button className="btn w-full bg-[#0F172A] text-white font-bold">
+                                <HiShoppingBag className="text-xl"/>
+                                Add to Cart
+                            </button>
                         </div>
-                        <div className="grid grid-cols-2 xl:grid-cols-3 gap-6">
+                        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-2 lg:gap-6">
                             <div className="bg-green-50 px-4 py-6">
                                 <FaShippingFast className="text-2xl" />
                                 <h1 className="text-[#0F172A] font-semibold text-base my-1">Free shipping</h1>

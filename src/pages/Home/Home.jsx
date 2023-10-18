@@ -68,7 +68,7 @@ const Home = () => {
                                     Eyewear Collection
                                 </span>
                                 <h4 className="text-2xl font-semibold text-[#0F172A] flex-grow lg:mt-6">See Clearly, Look Stylish with Us</h4>
-                                <Link className="max-w-fit">
+                                <Link to="/eyewearCollection" className="max-w-fit">
                                     <button className="btn bg-white text-[#0F172A] normal-case">Show me all</button>
                                 </Link>
                             </div>
