@@ -9,6 +9,7 @@ import EyewearCollection from "../../pages/EyewearCollection/EyewearCollection";
 import HomeKitchen from "../../pages/HomeKitchen/HomeKitchen";
 import Electronics from "../../pages/Electornics/Electronics";
 import GamingAccessories from "../../pages/GamingAccessories/GamingAccessories";
+import MyCart from "../../pages/MyCart/MyCart";
 
 const router = createBrowserRouter([
     {
@@ -52,6 +53,10 @@ const router = createBrowserRouter([
                 path: "/gamingAccessories",
                 element: <GamingAccessories />,
                 loader: () => fetch("http://localhost:5100/products"),
+            },
+            {
+                path: "myCart",
+                element: <MyCart />
             },
             {
                 path: "/products/:id",

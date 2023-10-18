@@ -10,6 +10,12 @@ import { HiShoppingBag } from "react-icons/hi2";
 const ProductDetails = () => {
     const loadedProduct = useLoaderData()
     const { name, brand, price, description, rating, image } = loadedProduct
+
+    const handleAddToCart = () => {
+        
+    }
+
+
     return (
         <div className="container mx-auto px-4 my-[120px] border rounded-xl">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 p-7">
@@ -33,7 +39,7 @@ const ProductDetails = () => {
                     <p className="text-[#0F172A] font-semibold mt-4">Description: <span className="font-normal">{description}</span></p>
                     <div className="flex flex-col min-h-[400px] gap-6">
                         <div className="flex-grow max-w-sm mt-6">
-                            <button className="btn w-full bg-[#0F172A] text-white font-bold">
+                            <button onClick={handleAddToCart} className="btn w-full bg-[#0F172A] text-white font-bold">
                                 <HiShoppingBag className="text-xl"/>
                                 Add to Cart
                             </button>

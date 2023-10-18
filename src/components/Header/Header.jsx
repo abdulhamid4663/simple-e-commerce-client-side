@@ -10,14 +10,14 @@ const Header = () => {
             <NavLink to="/addProduct">Add Product</NavLink>
         </li>
         <li>
-            <NavLink to="/login">Login</NavLink>
+            <NavLink to="/myCart">My Cart</NavLink>
         </li>
     </>
 
 
     return (
         <div className="bg-base-100">
-            <div className="container mx-auto px-4">
+            <div className="container mx-auto px-2 lg:px-4">
                 <div className="navbar">
                     <div className="navbar-start">
                         <div className="dropdown">
@@ -40,23 +40,7 @@ const Header = () => {
                         </ul>
                     </div>
                     <div className="navbar-end">
-                        <div className="dropdown dropdown-end">
-                            <label tabIndex={0} className="btn btn-ghost">
-                                <div className="indicator">
-                                    <span className="font-normal text-sm normal-case">My Cart</span>
-                                </div>
-                            </label>
-                            <div tabIndex={0} className="mt-3 z-[1] card card-compact dropdown-content w-52 bg-base-100 shadow">
-                                <div className="card-body">
-                                    <span className="font-bold text-lg">8 Items</span>
-                                    <div className="card-actions">
-                                        <Link className="w-full">
-                                            <button className="btn btn-primary btn-block">View cart</button>
-                                        </Link>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        
                         <a className="btn normal-case">Login</a>
                     </div>
                 </div>
