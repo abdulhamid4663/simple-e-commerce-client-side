@@ -54,7 +54,7 @@ const Home = () => {
                                     Shoe Showcase
                                 </span>
                                 <h4 className="text-2xl font-semibold text-[#0F172A] flex-grow lg:mt-6">Step into Style with Our Selection.</h4>
-                                <Link className="max-w-fit">
+                                <Link to="/shoeShowcase" className="max-w-fit">
                                     <button className="btn bg-white text-[#0F172A] normal-case">Show me all</button>
                                 </Link>
                             </div>
