@@ -30,7 +30,7 @@ const Home = () => {
             </div>
             {/* Category Section */}
             <div className="container mx-auto px-4 my-[120px]">
-                <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#0F172A]">Shop by Category. <span className="text-[#6B7280]">Find your style, explore our categories</span></h1>
+                <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#0F172A]">Shop by Category. <span className="text-[#6B7280]">Find Your Style, Explore Our Diverse Range of Products.</span></h1>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 mt-12">
                     <div className="bg-sky-50 rounded-xl p-7 lg:pr-0">
@@ -40,7 +40,7 @@ const Home = () => {
                                     Clothing Collection
                                 </span>
                                 <h4 className="text-2xl font-semibold text-[#0F172A] flex-grow lg:mt-6">Elevate Your Style with Our Collection.</h4>
-                                <Link className="max-w-fit">
+                                <Link to="clothingCollection" className="max-w-fit">
                                     <button className="btn bg-white text-[#0F172A] normal-case">Show me all</button>
                                 </Link>
                             </div>

@@ -2,7 +2,7 @@ import { useState } from "react";
 
 
 const AddProduct = () => {
-    const [selected, setSelected] = useState('')
+    const [value, setValue] = useState('')
 
 
     const handleOnSubmit = e => {
@@ -13,7 +13,7 @@ const AddProduct = () => {
         const price = form.price.value;
         const description = form.description.value;
         const rating = form.rating.value;
-        const type = selected;
+        const type = value;
         const image = form.image.value;
 
         const newProduct = { name, brand, price, description, rating, type, image };
@@ -28,15 +28,16 @@ const AddProduct = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data)
+                form.reset()
             })
     }
 
     const handleOnChange = e => {
-        setSelected(e.target.value)
+        setValue(e.target.value)
     }
 
     return (
-        <div className="container mx-auto px-4 my-28">
+        <div className="container mx-auto px-4 my-[120px]">
             <div>
                 <h1 className="text-[#0F172A] text-4xl">Add Product</h1>
             </div>
@@ -80,14 +81,14 @@ const AddProduct = () => {
                         <div className="lg:flex-1">
                             <div className="flex flex-wrap items-center gap-6">
                                 <div className="lg:flex-1">
-                                    <select onChange={handleOnChange} name="type" className="select select-ghost w-full">
-                                        <option disabled selected>Select the Type</option>
-                                        <option value="Clothing">Clothing</option>
-                                        <option value="Shoes">Shoes</option>
-                                        <option value="Glasses">Glasses</option>
-                                        <option value="Home & Kitchen">Home & Kitchen</option>
-                                        <option value="Electronics">Electronics</option>
-                                        <option value="Gaming accessories">Gaming accessories</option>
+                                    <select onChange={handleOnChange} defaultValue="Select the Type" name="type" className="select select-ghost w-full">
+                                        <option disabled>Select the Type</option>
+                                        <option defaultValue="Clothing">Clothing</option>
+                                        <option defaultValue="Shoes">Shoes</option>
+                                        <option defaultValue="Glasses">Glasses</option>
+                                        <option defaultValue="Home & Kitchen">Home & Kitchen</option>
+                                        <option defaultValue="Electronics">Electronics</option>
+                                        <option defaultValue="Gaming accessories">Gaming accessories</option>
                                     </select>
                                 </div>
                             </div>
