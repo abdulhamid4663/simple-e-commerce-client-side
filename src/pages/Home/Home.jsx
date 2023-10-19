@@ -45,7 +45,7 @@ const Home = () => {
                                     <button className="btn bg-white text-[#0F172A] normal-case">Show me all</button>
                                 </Link>
                             </div>
-                            <img src="https://i.ibb.co/6v304kx/New-Mockups-no-hanger-TShirt-Yellow-transformed.png" alt="t-shirt" className="lg:w-[200px] md:h-[200px]" />
+                            <img src="https://i.ibb.co/6v304kx/New-Mockups-no-hanger-TShirt-Yellow-transformed.png" alt="t-shirt" className="w-full h-full" />
                         </div>
                     </div>
                     <div className="bg-lime-50 rounded-xl p-7 lg:pr-0">
@@ -59,7 +59,7 @@ const Home = () => {
                                     <button className="btn bg-white text-[#0F172A] normal-case">Show me all</button>
                                 </Link>
                             </div>
-                            <img src="https://i.ibb.co/RCqnC0k/istockphoto-1350560575-170667a-transformed.png" alt="Shoes" className="lg:w-[200px] md:h-[200px]" />
+                            <img src="https://i.ibb.co/RCqnC0k/istockphoto-1350560575-170667a-transformed.png" alt="Shoes" className="w-full h-full" />
                         </div>
                     </div>
                     <div className="bg-purple-50 rounded-xl p-7 lg:pr-0">
@@ -74,7 +74,7 @@ const Home = () => {
                                 </Link>
                             </div>
                             <div className="flex-1">
-                                <img src="https://i.ibb.co/dgHDFz2/r-BVap2-FUJdy-AWLDl-AABy-Q-cy6c-I780-transformed.png" alt="Eyewear" />
+                                <img src="https://i.ibb.co/dgHDFz2/r-BVap2-FUJdy-AWLDl-AABy-Q-cy6c-I780-transformed.png" alt="Eyewear" className="w-full h-full"/>
                             </div>
                         </div>
                     </div>
@@ -89,7 +89,7 @@ const Home = () => {
                                     <button className="btn bg-white text-[#0F172A] normal-case">Show me all</button>
                                 </Link>
                             </div>
-                            <img src="https://i.ibb.co/8NZJ7KR/frying-pan-kitchenware-cookware-and-bakeware-kitchen-utensil-kitchen-transformed.png" alt="Home & Kitchen" className="lg:w-[280px] lg:h-[250px]" />
+                            <img src="https://i.ibb.co/8NZJ7KR/frying-pan-kitchenware-cookware-and-bakeware-kitchen-utensil-kitchen-transformed.png" alt="Home & Kitchen" className="w-full h-full" />
                         </div>
                     </div>
                     <div className="bg-pink-50 rounded-xl">
@@ -103,7 +103,7 @@ const Home = () => {
                                     <button className="btn bg-white text-[#0F172A] normal-case">Show me all</button>
                                 </Link>
                             </div>
-                            <img src="https://i.ibb.co/VCDx7GL/laptop-computer-electronics-multimedia-gadget-national-day-element-transformed.png" alt="Electronics" className="lg:w-[200px] md:h-[200px]" />
+                            <img src="https://i.ibb.co/VCDx7GL/laptop-computer-electronics-multimedia-gadget-national-day-element-transformed.png" alt="Electronics" className="w-full h-full" />
                         </div>
                     </div>
                     <div className="bg-green-50 rounded-xl">
@@ -117,7 +117,7 @@ const Home = () => {
                                     <button className="btn bg-white text-[#0F172A] normal-case">Show me all</button>
                                 </Link>
                             </div>
-                            <img src="https://i.ibb.co/tBsn2QH/png-clipart-xbox-one-controller-game-controllers-video-game-console-accessories-video-game-consoles.png" alt="Gaming accessories " className="w-[200px] md:h-[200px]" />
+                            <img src="https://i.ibb.co/tBsn2QH/png-clipart-xbox-one-controller-game-controllers-video-game-console-accessories-video-game-consoles.png" alt="Gaming accessories " className="w-full h-full" />
                         </div>
                     </div>
                 </div>
