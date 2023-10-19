@@ -66,14 +66,13 @@ const Contact = () => {
                                 <div className="lg:flex-1">
                                     <div className="flex flex-wrap items-center gap-6">
                                         <div className="lg:flex-1">
-                                            <select defaultValue="Select the Section" name="type" className="select select-ghost w-full">
-                                                <option disabled>Select the Section</option>
-                                                <option defaultValue="Clothing">Clothing</option>
-                                                <option defaultValue="Shoes">Shoes</option>
-                                                <option defaultValue="Glasses">Glasses</option>
-                                                <option defaultValue="Home & Kitchen">Home & Kitchen</option>
-                                                <option defaultValue="Electronics">Electronics</option>
-                                                <option defaultValue="Gaming accessories">Gaming accessories</option>
+                                            <select defaultValue="Technical Support" name="type" className="select select-ghost w-full">
+                                                <option disabled>Select the Reason</option>
+                                                <option defaultValue='Technical Support'>Technical Support</option>
+                                                <option defaultValue="Billing or Payment Concerns">Billing or Payment Concerns</option>
+                                                <option defaultValue="Account Management">Account Management</option>
+                                                <option defaultValue="Product or Service Feedback">Product or Service Feedback</option>
+                                                <option defaultValue="Order Status and Tracking">Order Status and Tracking</option>
                                             </select>
                                         </div>
                                     </div>

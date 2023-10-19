@@ -7,7 +7,7 @@ const ProductsCards = ({ product }) => {
 
     return (
         <div className="card card-compact">
-            <div className='bg-base-200 py-8 px-4 rounded-xl'>
+            <div className='bg-[#F8FAFC] py-8 px-4 rounded-xl'>
                 <figure className='h-[200px] lg:h-[300px]'><img src={image} alt={`image of ${name}`} className='h-full' /></figure>
             </div>
             <div className="card-body">

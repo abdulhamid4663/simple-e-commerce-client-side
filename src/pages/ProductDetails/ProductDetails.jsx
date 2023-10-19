@@ -36,9 +36,9 @@ const ProductDetails = () => {
 
 
     return (
-        <div className="container mx-auto px-4 my-[120px] border rounded-xl">
+        <div className="container mx-auto px-4 my-[120px]">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 p-7">
-                <div className="bg-base-200 p-8 flex md:min-h-[500px]">
+                <div className="bg-base-200 p-8 flex md:min-h-[500px] rounded-2xl">
                     <img src={image} alt="" className="mx-auto" />
                 </div>
                 <div>

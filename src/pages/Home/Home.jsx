@@ -1,7 +1,10 @@
-import { BiSearch } from "react-icons/bi"
-import { Link } from "react-router-dom";
+import { BiSearch, BiSolidStar } from "react-icons/bi"
+import { Link, useLoaderData } from "react-router-dom";
 
 const Home = () => {
+    const products = useLoaderData();
+    const slicedProduct = products.slice(-8).reverse()
+
     return (
         <div>
             {/* Banner Section */}
@@ -14,12 +17,12 @@ const Home = () => {
                                 <div className="py-12 lg:py-0">
                                     <h1 className="text-xl font-semibold text-[#334155]">Just In! 🛍️</h1>
                                     <p className="py-6 text-2xl md:text-3xl lg:text-5xl font-bold text-[#0F172A] leading-snug">Discover our newest arrivals. Shop now!</p>
-                                    <button className="btn lg:btn-lg bg-[#0F172A] text-white hover:text-[#0F172A] rounded-2xl">
+                                    <a href="#newArrival" className="btn lg:btn-md bg-[#0F172A] text-white hover:text-[#0F172A] rounded-2xl">
                                         Browse
-                                        <div className="text-2xl">
+                                        <div className="text-xl">
                                             <BiSearch />
                                         </div>
-                                    </button>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -119,6 +122,46 @@ const Home = () => {
                     </div>
                 </div>
             </div>
+            {/* Latest Arrive Section */}
+            <div className="container mx-auto px-4 mb-[120px]">
+                <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#0F172A]">New Arrivals. <span className="text-[#6B7280]">Discover Our Latest Arrivals</span></h1>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mt-12" id="newArrival">
+                    {
+                        slicedProduct.map(product =>
+                            <div key={product._id}>
+                                <div className="card border p-6">
+                                    <div className="bg-[#F8FAFC] p-6 rounded-2xl">
+                                        <figure className="h-[250px]">
+                                            <img src={product.image} className="h-full" />
+                                        </figure>
+                                    </div>
+
+                                    <div className="card-body pb-0 px-0 h-[300px] lg:h-[350px] xl:h-[350px]">
+                                        <h2 className="card-title text-lg">{product.name.length > 50 ? product.name.slice(0, 50) + " ..." : product.name}</h2>
+                                        <div className="flex items-center justify-between">
+                                            <div>
+                                                <p className='border-2 py-1 px-2 border-green-500 rounded-lg text-green-500 font-bold'>${product.price}</p>
+                                            </div>
+                                            <div className='flex items-center gap-1'>
+                                                <BiSolidStar className='text-yellow-500 text-xl' />
+                                                <p className='text-lg font-semibold text-[#0F172A]'>{product.rating}</p>
+                                            </div>
+                                        </div>
+                                        <h4 className=" text-[#6B7280] font-semibold">Brand: <span className="font-medium text-[#0F172A]">{product.brand}</span></h4>
+                                        <p className="text-[#6B7280] text-base font-medium flex-grow">{product.description.length > 80 ? product.description.slice(0, 80) + " ..." : product.description}</p>
+                                        <div className="card-actions justify-end">
+                                            <Link to={`/productDetails/${product._id}`}>
+                                                <button className="btn bg-[#0F172A] text-white hover:text-[#0F172A]">Details</button>
+                                            </Link>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        )
+                    }
+                </div>
+            </div>
+
 
         </div>
     );
