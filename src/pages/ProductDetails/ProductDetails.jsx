@@ -6,6 +6,7 @@ import { BsGlobe2 } from "react-icons/bs";
 import { RiRefund2Fill } from "react-icons/ri";
 import { HiShoppingBag } from "react-icons/hi2";
 import Swal from 'sweetalert2'
+import { Helmet } from "react-helmet-async";
 
 
 const ProductDetails = () => {
@@ -37,6 +38,9 @@ const ProductDetails = () => {
 
     return (
         <div className="container mx-auto px-4 my-[120px]">
+            <Helmet>
+                <title>Diyafah || Product Details</title>
+            </Helmet>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 p-7">
                 <div className="bg-base-200 p-8 flex md:min-h-[500px] rounded-2xl">
                     <img src={image} alt="" className="mx-auto" />

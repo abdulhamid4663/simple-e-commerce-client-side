@@ -3,6 +3,7 @@ import { FcGoogle } from "react-icons/fc";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../context/AuthProvider/AuthProvider";
+import { Helmet } from "react-helmet-async";
 
 
 const Login = () => {
@@ -99,6 +100,9 @@ const Login = () => {
 
     return (
         <div className="flex flex-col min-h-[700px] justify-center items-center">
+            <Helmet>
+                <title>Diyafah || Login</title>
+            </Helmet>
             <div className="container mx-auto px-4 mb-7">
                 <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#0F172A] text-center">Login</h1>
             </div>

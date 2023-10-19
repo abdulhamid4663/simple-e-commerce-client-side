@@ -1,9 +1,13 @@
+import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
 
 const ErrorPage = () => {
     return (
         <div className="bg-[#F8FAFC]">
+            <Helmet>
+                <title>Error, Not Found</title>
+            </Helmet>
             <div className="min-h-screen flex flex-col justify-center items-center">
                 <div>
                     <img src="/404.gif" />

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
 
@@ -42,6 +43,9 @@ const MyCart = () => {
 
     return (
         <div className="container mx-auto px-4 my-[120px]">
+            <Helmet>
+                <title>Diyafah || My Cart</title>
+            </Helmet>
             <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#0F172A]">Shopping Cart</h1>
             <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 mt-[80px]">
                 <div className="lg:col-span-3">

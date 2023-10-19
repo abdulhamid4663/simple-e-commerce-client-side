@@ -1,6 +1,7 @@
 import { useLoaderData } from "react-router-dom";
 import ProductsCards from "../../components/ProductsCards/ProductsCards";
 import Slider from "../../components/Slider/Slider";
+import { Helmet } from "react-helmet-async";
 
 
 const EyewearCollection = () => {
@@ -9,6 +10,9 @@ const EyewearCollection = () => {
 
     return (
         <div className="container mx-auto px-4 my-[120px]">
+            <Helmet>
+                <title>Diyafah || Eyewear Collection</title>
+            </Helmet>
             <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#0F172A]">See Clearly with Glasses. <span className="text-[#6B7280]">Explore Our Eyewear Options</span></h1>
 
             <div className="grid grid-cols-1 lg:grid-cols-4 gap-12 lg:gap-6 mt-[80px]">

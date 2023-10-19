@@ -1,14 +1,18 @@
 import { useLoaderData } from "react-router-dom";
 import ProductsCards from "../../components/ProductsCards/ProductsCards";
 import Slider from "../../components/Slider/Slider";
+import { Helmet } from "react-helmet-async";
 
 
 const GamingAccessories = () => {
     const loadedProducts = useLoaderData()
     const filterProducts = loadedProducts.filter(product => product?.type === "Gaming Accessories")
-    
+
     return (
         <>
+            <Helmet>
+                <title>Diyafah || Gaming Accessories</title>
+            </Helmet>
             {
                 !filterProducts
                     ?

@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { BiSearch, BiSolidStar } from "react-icons/bi"
 import { Link, useLoaderData } from "react-router-dom";
 
@@ -7,6 +8,9 @@ const Home = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>Diyafah || Home</title>
+            </Helmet>
             {/* Banner Section */}
             <div className="bg-gradient-to-b from-orange-100 to-orange-50">
                 <div className="bg-cover bg-center" style={{ backgroundImage: "url(/shapes.svg)" }}>
@@ -74,7 +78,7 @@ const Home = () => {
                                 </Link>
                             </div>
                             <div className="flex-1">
-                                <img src="https://i.ibb.co/dgHDFz2/r-BVap2-FUJdy-AWLDl-AABy-Q-cy6c-I780-transformed.png" alt="Eyewear" className="w-full h-full"/>
+                                <img src="https://i.ibb.co/dgHDFz2/r-BVap2-FUJdy-AWLDl-AABy-Q-cy6c-I780-transformed.png" alt="Eyewear" className="w-full h-full" />
                             </div>
                         </div>
                     </div>

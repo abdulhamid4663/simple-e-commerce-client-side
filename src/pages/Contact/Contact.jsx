@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { FaLocationDot, FaPhone } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 
@@ -9,6 +10,9 @@ const Contact = () => {
 
     return (
         <div className="container mx-auto px-4 my-[120px]">
+            <Helmet>
+                <title>Diyafah || Contact Us</title>
+            </Helmet>
             <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#0F172A]">Contact. <span className="text-[#6B7280]">Get in Touch</span></h1>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-[80px]">

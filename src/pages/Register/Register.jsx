@@ -3,6 +3,7 @@ import { FcGoogle } from "react-icons/fc";
 import { useContext } from "react";
 import { AuthContext } from "../../context/AuthProvider/AuthProvider";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
 const Register = () => {
     const { createUser, updateUserProfile, loginWIthGoogle } = useContext(AuthContext)
@@ -166,6 +167,9 @@ const Register = () => {
 
     return (
         <div className="flex flex-col min-h-[800px] justify-center items-center px-4">
+            <Helmet>
+                <title>Diyafah || Register</title>
+            </Helmet>
             <div className="container mx-auto px-4 mb-7">
                 <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#0F172A] text-center">Register</h1>
             </div>

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
 
@@ -48,6 +49,9 @@ const UpdateProduct = () => {
 
     return (
         <div className="container mx-auto px-4 my-[120px]">
+            <Helmet>
+                <title>Diyafah || Update Product</title>
+            </Helmet>
             <div>
                 <h1 className="text-[#0F172A] text-4xl">Update Product</h1>
             </div>
