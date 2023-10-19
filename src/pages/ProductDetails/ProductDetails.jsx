@@ -10,15 +10,17 @@ import Swal from 'sweetalert2'
 
 const ProductDetails = () => {
     const loadedProduct = useLoaderData()
-    const { name, brand, price, description, rating, image } = loadedProduct
+    const { _id, name, brand, price, description, rating, type, image } = loadedProduct
 
     const handleAddToCart = () => {
+        const product = { _id, name, brand, price, description, rating, type, image }
+
         fetch("http://localhost:5100/cart", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
             },
-            body: JSON.stringify(loadedProduct)
+            body: JSON.stringify(product)
         })
             .then(res => res.json())
             .then(data => {

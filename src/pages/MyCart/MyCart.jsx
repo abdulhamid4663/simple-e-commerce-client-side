@@ -1,12 +1,42 @@
+import { useState } from "react";
 import { useLoaderData } from "react-router-dom";
+import Swal from "sweetalert2";
 
 
 const MyCart = () => {
     const loadedProduct = useLoaderData();
-    console.log(loadedProduct);
+    const [cartProduct, setCartProduct] = useState(loadedProduct)
 
-    const handleDelete = () => {
-        
+    const handleDelete = (id) => {
+        console.log(id)
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                Swal.fire(
+                    'Deleted!',
+                    'Your file has been deleted.',
+                    'success'
+                )
+
+                fetch(`http://localhost:5100/cart/${id}`, {
+                    method: "DELETE",
+                })
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data)
+                })
+
+                const remainingCartProduct = cartProduct.filter(product => product._id !== id)
+                setCartProduct(remainingCartProduct)
+            }
+        })
     }
 
 
@@ -17,7 +47,7 @@ const MyCart = () => {
                 <div className="lg:col-span-3">
                     <div className="grid gap-6">
                         {
-                            loadedProduct.map(product =>
+                            cartProduct.map(product =>
                                 <div key={product._id} className="grid grid-cols-4 gap-6">
                                     <figure className="bg-base-200 h-[200px] col-span-1 p-4 rounded-xl">
                                         <img src={product.image} alt={`image of ${product.name}`} className="h-full mx-auto" />
@@ -31,7 +61,7 @@ const MyCart = () => {
                                             </div>
                                             <div className="flex items-center justify-between pr-6">
                                                 <p className="text-sm font-semibold text-slate-500">in stock</p>
-                                                <button onClick={handleDelete} className="text-blue-400 font-semibold">Remove</button>
+                                                <button onClick={() => handleDelete(product._id)} className="text-blue-400 font-semibold">Remove</button>
                                             </div>
                                         </div>
                                     </div>
