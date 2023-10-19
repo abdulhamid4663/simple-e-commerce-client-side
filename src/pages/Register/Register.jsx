@@ -5,7 +5,7 @@ import { AuthContext } from "../../context/AuthProvider/AuthProvider";
 import Swal from "sweetalert2";
 
 const Register = () => {
-    const { createUser } = useContext(AuthContext)
+    const { createUser, updateUserProfile } = useContext(AuthContext)
     const navigate = useNavigate();
 
     const handleOnSubmit = e => {
@@ -35,7 +35,7 @@ const Register = () => {
             return;
         }
 
-        if(!/[A-Z]/.test(password)) {
+        if (!/[A-Z]/.test(password)) {
             const Toast = Swal.mixin({
                 toast: true,
                 position: 'top-end',
@@ -55,7 +55,7 @@ const Register = () => {
             return;
         }
 
-        if(!/[#?!@$%^&*-]/.test(password)) {
+        if (!/[#?!@$%^&*-]/.test(password)) {
             const Toast = Swal.mixin({
                 toast: true,
                 position: 'top-end',
@@ -76,8 +76,15 @@ const Register = () => {
         }
 
         createUser(email, password)
-            .then(result => {
-                const currentUser = result.user
+            .then(() => {
+
+                updateUserProfile(name)
+                    .then(() => {
+
+                    })
+                    .catch(error => {
+                        console.error(error.message)
+                    })
 
                 const Toast = Swal.mixin({
                     toast: true,
