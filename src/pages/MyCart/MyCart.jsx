@@ -25,7 +25,7 @@ const MyCart = () => {
                     'success'
                 )
 
-                fetch(`http://localhost:5100/cart/${id}`, {
+                fetch(`https://diyafah-server.vercel.app/cart/${id}`, {
                     method: "DELETE",
                 })
                 .then(res => res.json())

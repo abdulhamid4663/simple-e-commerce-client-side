@@ -21,7 +21,7 @@ const UpdateProduct = () => {
 
         const updatedProduct = { name, brand, price, description, rating, type, image };
 
-        fetch(`http://localhost:5100/products/${loadedProduct._id}`, {
+        fetch(`https://diyafah-server.vercel.app/products/${loadedProduct._id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"

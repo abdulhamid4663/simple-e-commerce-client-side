@@ -26,7 +26,7 @@ const router = createBrowserRouter([
             {
                 path: '/',
                 element: <Home />,
-                loader: () => fetch("http://localhost:5100/products")
+                loader: () => fetch("https://diyafah-server.vercel.app/products")
             },
             {
                 path: "/addProduct",
@@ -35,47 +35,47 @@ const router = createBrowserRouter([
             {
                 path: "/updateProduct/:id",
                 element: <PrivateRoutes><UpdateProduct /></PrivateRoutes>,
-                loader: ({ params }) => fetch(`http://localhost:5100/products/${params.id}`)
+                loader: ({ params }) => fetch(`https://diyafah-server.vercel.app/products/${params.id}`)
             },
             {
                 path: "/clothingCollection",
                 element: <ClothingCollection />,
-                loader: () => fetch("http://localhost:5100/products"),
+                loader: () => fetch("https://diyafah-server.vercel.app/products"),
             },
             {
                 path: "/shoeShowcase",
                 element: <ShoeShowcase />,
-                loader: () => fetch("http://localhost:5100/products"),
+                loader: () => fetch("https://diyafah-server.vercel.app/products"),
             },
             {
                 path: "/eyewearCollection",
                 element: <EyewearCollection />,
-                loader: () => fetch("http://localhost:5100/products"),
+                loader: () => fetch("https://diyafah-server.vercel.app/products"),
             },
             {
                 path: "/homeKitchen",
                 element: <HomeKitchen />,
-                loader: () => fetch("http://localhost:5100/products"),
+                loader: () => fetch("https://diyafah-server.vercel.app/products"),
             },
             {
                 path: "/electronics",
                 element: <Electronics />,
-                loader: () => fetch("http://localhost:5100/products"),
+                loader: () => fetch("https://diyafah-server.vercel.app/products"),
             },
             {
                 path: "/gamingAccessories",
                 element: <GamingAccessories />,
-                loader: () => fetch("http://localhost:5100/products"),
+                loader: () => fetch("https://diyafah-server.vercel.app/products"),
             },
             {
                 path: "myCart",
                 element: <PrivateRoutes><MyCart /></PrivateRoutes>,
-                loader: () => fetch("http://localhost:5100/cart"),
+                loader: () => fetch("https://diyafah-server.vercel.app/cart"),
             },
             {
                 path: "/productDetails/:id",
                 element: <PrivateRoutes><ProductDetails /></PrivateRoutes>,
-                loader: ({ params }) => fetch(`http://localhost:5100/products/${params.id}`)
+                loader: ({ params }) => fetch(`https://diyafah-server.vercel.app/products/${params.id}`)
             },
             {
                 path: "/login",

@@ -15,7 +15,7 @@ const ProductDetails = () => {
     const handleAddToCart = () => {
         const product = { _id, name, brand, price, description, rating, type, image }
 
-        fetch("http://localhost:5100/cart", {
+        fetch("https://diyafah-server.vercel.app/cart", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

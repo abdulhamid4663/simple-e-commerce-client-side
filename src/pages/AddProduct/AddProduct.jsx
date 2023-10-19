@@ -19,7 +19,7 @@ const AddProduct = () => {
 
         const newProduct = { name, brand, price, description, rating, type, image };
 
-        fetch("http://localhost:5100/products", {
+        fetch("https://diyafah-server.vercel.app/products", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
