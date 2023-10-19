@@ -10,6 +10,7 @@ import HomeKitchen from "../../pages/HomeKitchen/HomeKitchen";
 import Electronics from "../../pages/Electornics/Electronics";
 import GamingAccessories from "../../pages/GamingAccessories/GamingAccessories";
 import MyCart from "../../pages/MyCart/MyCart";
+import UpdateProduct from "../../pages/UpdateProduct/UpdateProduct";
 
 const router = createBrowserRouter([
     {
@@ -23,6 +24,12 @@ const router = createBrowserRouter([
             {
                 path: "/addProduct",
                 element: <AddProduct />
+            },
+            {
+                path: "/updateProduct/:id",
+                element: <UpdateProduct />,
+                loader: ({ params }) => fetch(`http://localhost:5100/products/${params.id}`)
+
             },
             {
                 path: "/clothingCollection",
@@ -60,7 +67,7 @@ const router = createBrowserRouter([
                 loader: () => fetch("http://localhost:5100/cart"),
             },
             {
-                path: "/products/:id",
+                path: "/productDetails/:id",
                 element: <ProductDetails />,
                 loader: ({ params }) => fetch(`http://localhost:5100/products/${params.id}`)
             }

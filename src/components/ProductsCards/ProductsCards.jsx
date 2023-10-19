@@ -24,10 +24,12 @@ const ProductsCards = ({ product }) => {
                     </div>
                 </div>
                 <div className="card-actions justify-between mt-6">
-                    <Link to={`/products/${_id}`}>
+                    <Link to={`/productDetails/${_id}`}>
                         <button className="btn bg-[#0F172A] text-white rounded-3xl hover:text-black">Details</button>
                     </Link>
-                    <button className="btn bg-[#0F172A] text-white rounded-3xl hover:text-black">Update</button>
+                    <Link to={`/updateProduct/${_id}`}>
+                        <button className="btn bg-[#0F172A] text-white rounded-3xl hover:text-black">Update</button>
+                    </Link>
                 </div>
             </div>
         </div>
