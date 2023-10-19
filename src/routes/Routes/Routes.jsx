@@ -14,6 +14,7 @@ import UpdateProduct from "../../pages/UpdateProduct/UpdateProduct";
 import Login from "../../pages/Login/Login";
 import Register from "../../pages/Register/Register";
 import PrivateRoutes from "../PrivateRoutes/PrivateRoutes";
+import Contact from "../../pages/Contact/Contact";
 
 const router = createBrowserRouter([
     {
@@ -80,6 +81,10 @@ const router = createBrowserRouter([
             {
                 path: "/register",
                 element: <Register />
+            },
+            {
+                path: "/contact",
+                element: <Contact />
             }
 
         ]
