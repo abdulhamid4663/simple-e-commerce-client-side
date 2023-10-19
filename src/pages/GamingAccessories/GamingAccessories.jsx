@@ -29,11 +29,11 @@ const GamingAccessories = () => {
                         </div>
                     </div>
                     :
-                    <div className="flex flex-col items-center justify-center min-h-[500px] my-[120px]">
+                    <div className="flex flex-col items-center justify-center min-h-[500px] mb-[120px]">
                         <figure>
-                            <img src="https://i.ibb.co/8xV41SP/360-F-475012363-a-Nq-Xx8-Crso-Tf-JP5-KCf1r-ERd6-G50-K0h-Xw-removebg-preview.png" alt="" />
+                            <img src="https://i.ibb.co/cFy0PBZ/360-F-475012363-a-Nq-Xx8-Crso-Tf-JP5-KCf1r-ERd6-G50-K0h-Xw-removebg-preview1.png" alt="" />
                         </figure>
-                        <p className="text-[#0F172A] text-xl max-w-2xl text-center">Sorry, we couldn&apos;t find the information you&apos;re looking for at the moment. It may not have been added yet or is currently unavailable.</p>
+                        <p className="text-[#0F172A] text-xl max-w-2xl text-center mt-6">Sorry, we couldn&apos;t find the information you&apos;re looking for at the moment. It may not have been added yet or is currently unavailable.</p>
                     </div>
             }
 
