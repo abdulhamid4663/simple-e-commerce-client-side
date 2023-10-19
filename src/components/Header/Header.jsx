@@ -5,7 +5,7 @@ import Swal from "sweetalert2";
 
 
 const Header = () => {
-    const { user, userLogout } = useContext(AuthContext);
+    const { user, userLogout, loading } = useContext(AuthContext);
 
     const navLinks = <>
         <li>
@@ -15,34 +15,57 @@ const Header = () => {
             <NavLink to="/addProduct">Add Product</NavLink>
         </li>
         <li>
+            <NavLink to="/contact">Contact us</NavLink>
+        </li>
+        <li>
             <NavLink to="/myCart">My Cart</NavLink>
+        </li>
+    </>
+
+    const navCategories = <>
+        <li>
+            <NavLink to='/clothingCollection'>Clothing Collection</NavLink>
+        </li>
+        <li>
+            <NavLink to='/shoeShowcase'>Shoe Collection</NavLink>
+        </li>
+        <li>
+            <NavLink to='/eyewearCollection'>Eyewear Collection</NavLink>
+        </li>
+        <li>
+            <NavLink to='/homeKitchen'>Home & Kitchen</NavLink>
+        </li>
+        <li>
+            <NavLink to='/electronics'>Electronics Hub</NavLink>
+        </li>
+        <li>
+            <NavLink to='/gamingAccessories'>Gaming Accessories</NavLink>
         </li>
     </>
 
     const handleLogout = () => {
         userLogout()
-        .then(() => {
-            const Toast = Swal.mixin({
-                toast: true,
-                position: 'top-end',
-                showConfirmButton: false,
-                timer: 3000,
-                timerProgressBar: true,
-                didOpen: (toast) => {
-                    toast.addEventListener('mouseenter', Swal.stopTimer)
-                    toast.addEventListener('mouseleave', Swal.resumeTimer)
-                }
+            .then(() => {
+                const Toast = Swal.mixin({
+                    toast: true,
+                    position: 'top-end',
+                    showConfirmButton: false,
+                    timer: 3000,
+                    timerProgressBar: true,
+                    didOpen: (toast) => {
+                        toast.addEventListener('mouseenter', Swal.stopTimer)
+                        toast.addEventListener('mouseleave', Swal.resumeTimer)
+                    }
+                })
+                Toast.fire({
+                    icon: 'success',
+                    title: "User Logged out Successfully"
+                })
             })
-            Toast.fire({
-                icon: 'success',
-                title: "User Logged out Successfully"
+            .catch(error => {
+                console.error(error.message)
             })
-        })
-        .catch( error => {
-            console.error(error.message)
-        })
     }
-
 
     return (
         <div className="bg-base-100">
@@ -55,6 +78,12 @@ const Header = () => {
                             </label>
                             <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
                                 {navLinks}
+                                <li>
+                                    <a>Categories</a>
+                                    <ul className="p-2">
+                                        {navCategories}
+                                    </ul>
+                                </li>
                             </ul>
                         </div>
                         <Link to="/" className=" normal-case text-xl flex items-center gap-4 font-semibold text-[#6B7280]">
@@ -66,30 +95,55 @@ const Header = () => {
                     <div className="navbar-center hidden lg:flex">
                         <ul className="menu menu-horizontal px-1">
                             {navLinks}
+                            <li tabIndex={0} className="z-10">
+                                <details>
+                                    <summary>Categories</summary>
+                                    <ul className="p-2">
+                                        {navCategories}
+                                    </ul>
+                                </details>
+                            </li>
                         </ul>
                     </div>
                     <div className="navbar-end">
                         {
-                            user ?
-                                <div className="dropdown dropdown-end">
-                                    <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-                                        <div className="w-10 rounded-full">
-                                            <img src={user.photoUrl ? user.photoUrl : "https://i.ibb.co/tMy0bd5/pngwing-com.png"} />
-                                        </div>
-                                    </label>
-                                    <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
-                                        <li>
-                                            <a className="justify-between">
-                                                Profile
-                                                <span className="badge">New</span>
-                                            </a>
-                                        </li>
-                                        <li><a>Settings</a></li>
-                                        <li onClick={handleLogout}><a>Logout</a></li>
-                                    </ul>
-                                </div>
+                            loading ? ""
                                 :
-                                <Link to="/login" className="btn normal-case">Login</Link>
+                                <>
+                                    {
+                                        user ?
+                                            <div className="dropdown dropdown-end">
+                                                <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                                                    <div className="w-10 rounded-full">
+                                                        {
+                                                            user.photoURL
+                                                                ?
+                                                                <img src={user.photoURL} />
+                                                                :
+                                                                <img src="https://i.ibb.co/tMy0bd5/pngwing-com.png" />
+
+                                                        }
+                                                    </div>
+                                                </label>
+                                                <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
+                                                    <div className="text-center py-3">
+                                                        <p className="text-[#6B7280]">User:</p>
+                                                        <strong className="text-base text-[#334155]">{user.displayName}</strong>
+                                                    </div>
+                                                    <li>
+                                                        <a className="justify-between">
+                                                            Profile
+                                                            <span className="badge">New</span>
+                                                        </a>
+                                                    </li>
+                                                    <li><a>Settings</a></li>
+                                                    <li onClick={handleLogout}><a>Logout</a></li>
+                                                </ul>
+                                            </div>
+                                            :
+                                            <Link to="/login" className="btn normal-case">Login</Link>
+                                    }
+                                </>
                         }
                     </div>
                 </div>

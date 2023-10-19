@@ -29,12 +29,14 @@ const AuthProvider = ({ children }) => {
     }
 
     const updateUserProfile = (name) => {
+        setLoading(true)
         return updateProfile(auth.currentUser, {
             displayName: name
         })
     }
 
     const loginWIthGoogle = () => {
+        setLoading(true)
         return signInWithPopup(auth, googleProvider)
     }
 
