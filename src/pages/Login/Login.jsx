@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { FcGoogle } from "react-icons/fc";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../context/AuthProvider/AuthProvider";
 
@@ -8,6 +8,7 @@ import { AuthContext } from "../../context/AuthProvider/AuthProvider";
 const Login = () => {
     const { loginUser, loginWIthGoogle } = useContext(AuthContext);
     const navigate = useNavigate()
+    const location = useLocation()
 
     const handleOnSubmit = e => {
         e.preventDefault();
@@ -34,7 +35,7 @@ const Login = () => {
                     title: "User Logged in Successfully"
                 })
 
-                navigate("/")
+                navigate(location?.state ? location.state : "/")
             })
             .catch(() => {
                 const Toast = Swal.mixin({
