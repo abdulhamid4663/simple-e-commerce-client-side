@@ -6,7 +6,7 @@ import { AuthContext } from "../../context/AuthProvider/AuthProvider";
 
 
 const Login = () => {
-    const { loginUser } = useContext(AuthContext);
+    const { loginUser, loginWIthGoogle } = useContext(AuthContext);
     const navigate = useNavigate()
 
     const handleOnSubmit = e => {
@@ -36,7 +36,7 @@ const Login = () => {
 
                 navigate("/")
             })
-            .catch( () => {
+            .catch(() => {
                 const Toast = Swal.mixin({
                     toast: true,
                     position: 'top-end',
@@ -54,6 +54,46 @@ const Login = () => {
                 })
             })
 
+    }
+
+    const handleGoogleLoginIn = () => {
+        loginWIthGoogle()
+            .then(() => {
+                const Toast = Swal.mixin({
+                    toast: true,
+                    position: 'top-end',
+                    showConfirmButton: false,
+                    timer: 3000,
+                    timerProgressBar: true,
+                    didOpen: (toast) => {
+                        toast.addEventListener('mouseenter', Swal.stopTimer)
+                        toast.addEventListener('mouseleave', Swal.resumeTimer)
+                    }
+                })
+                Toast.fire({
+                    icon: 'success',
+                    title: "User logged in with google successfully",
+                })
+
+                navigate("/")
+            })
+            .catch(error => {
+                const Toast = Swal.mixin({
+                    toast: true,
+                    position: 'top-end',
+                    showConfirmButton: false,
+                    timer: 3000,
+                    timerProgressBar: true,
+                    didOpen: (toast) => {
+                        toast.addEventListener('mouseenter', Swal.stopTimer)
+                        toast.addEventListener('mouseleave', Swal.resumeTimer)
+                    }
+                })
+                Toast.fire({
+                    icon: 'error',
+                    title: error.message,
+                })
+            })
     }
 
     return (
@@ -84,7 +124,7 @@ const Login = () => {
                 </form>
                 <div className="divider">OR</div>
                 <div className="">
-                    <button className="btn text-blue-600 normal-case">
+                    <button onClick={handleGoogleLoginIn} className="btn text-blue-600 normal-case">
                         <FcGoogle className="text-xl" />
                         Login with Google
                     </button>

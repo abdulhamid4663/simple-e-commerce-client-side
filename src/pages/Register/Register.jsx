@@ -5,7 +5,7 @@ import { AuthContext } from "../../context/AuthProvider/AuthProvider";
 import Swal from "sweetalert2";
 
 const Register = () => {
-    const { createUser, updateUserProfile } = useContext(AuthContext)
+    const { createUser, updateUserProfile, loginWIthGoogle } = useContext(AuthContext)
     const navigate = useNavigate();
 
     const handleOnSubmit = e => {
@@ -124,6 +124,46 @@ const Register = () => {
 
     }
 
+    const handleGoogleLoginIn = () => {
+        loginWIthGoogle()
+            .then(() => {
+                const Toast = Swal.mixin({
+                    toast: true,
+                    position: 'top-end',
+                    showConfirmButton: false,
+                    timer: 3000,
+                    timerProgressBar: true,
+                    didOpen: (toast) => {
+                        toast.addEventListener('mouseenter', Swal.stopTimer)
+                        toast.addEventListener('mouseleave', Swal.resumeTimer)
+                    }
+                })
+                Toast.fire({
+                    icon: 'success',
+                    title: "User logged in with google successfully",
+                })
+
+                navigate("/")
+            })
+            .catch( error => {
+                const Toast = Swal.mixin({
+                    toast: true,
+                    position: 'top-end',
+                    showConfirmButton: false,
+                    timer: 3000,
+                    timerProgressBar: true,
+                    didOpen: (toast) => {
+                        toast.addEventListener('mouseenter', Swal.stopTimer)
+                        toast.addEventListener('mouseleave', Swal.resumeTimer)
+                    }
+                })
+                Toast.fire({
+                    icon: 'error',
+                    title: error.message,
+                })
+            })
+    }
+
     return (
         <div className="flex flex-col min-h-[800px] justify-center items-center px-4">
             <div className="container mx-auto px-4 mb-7">
@@ -155,7 +195,7 @@ const Register = () => {
                 </form>
                 <div className="divider">OR</div>
                 <div className="">
-                    <button className="btn text-blue-600 normal-case">
+                    <button onClick={handleGoogleLoginIn} className="btn text-blue-600 normal-case">
                         <FcGoogle className="text-xl" />
                         Login with Google
                     </button>
