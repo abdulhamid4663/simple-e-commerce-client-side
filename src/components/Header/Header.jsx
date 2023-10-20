@@ -84,7 +84,7 @@ const Header = () => {
     }
 
     return (
-        <div className="bg-base-100 fixed top-0 w-full z-10">
+        <div className="bg-base-100 sticky top-0 w-full z-10">
             <div className="container mx-auto px-2 lg:px-4">
                 <div className="navbar">
                     <div className="navbar-start">
