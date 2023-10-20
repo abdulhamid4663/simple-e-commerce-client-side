@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet-async";
 import { BiSearch, BiSolidStar } from "react-icons/bi"
 import { Link, useLoaderData } from "react-router-dom";
 import 'aos/dist/aos.css';
-Aos.init()
+Aos.init({})
 
 const Home = () => {
     const products = useLoaderData();
@@ -30,8 +30,8 @@ return (
             <div className="bg-cover bg-center" style={{ backgroundImage: "url(/shapes.svg)" }}>
                 <div className="container mx-auto px-4">
                     <div className="hero min-h-[700px]">
-                        <div className="hero-content p-0 flex-col-reverse lg:flex-row-reverse h-full min-h-[700px]">
-                            <img src="https://i.ibb.co/nLVD4Ph/girl.png" className="lg:h-[700px]" />
+                        <div className="hero-content p-0 flex-col-reverse lg:flex-row-reverse h-full xl:min-h-[700px]">
+                            <img src="https://i.ibb.co/nLVD4Ph/girl.png" className="w-full h-full object-cover" />
                             <div className="py-12 lg:py-0">
                                 <h1 className="text-xl font-semibold text-[#334155]">Just In! 🛍️</h1>
                                 <p className="py-6 text-2xl md:text-3xl lg:text-5xl font-bold text-[#0F172A] leading-snug">Discover our newest arrivals. Shop now!</p>
@@ -143,7 +143,7 @@ return (
                                 <button className="btn bg-white text-[#0F172A] normal-case">Show me all</button>
                             </Link>
                         </div>
-                        <div className="h-[300px] lg:h-full lg:w-1/2">
+                        <div  className="h-[300px] lg:h-full lg:w-1/2">
                             <img src="https://i.ibb.co/tBsn2QH/png-clipart-xbox-one-controller-game-controllers-video-game-console-accessories-video-game-consoles.png" alt="Gaming accessories " className="w-full h-full object-contain" />
                         </div>
                     </div>
@@ -151,9 +151,9 @@ return (
             </div>
         </div>
         {/* Latest Arrive Section */}
-        <div className="container mx-auto px-4 mb-[120px]">
+        <div id="newArrival" className="container mx-auto px-4 mb-[120px]">
             <h1 data-aos="fade-right" className="text-2xl md:text-3xl lg:text-4xl font-semibold text-orange-400">New Arrivals. <span className="text-[#6B7280]">Discover Our Latest Arrivals</span></h1>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mt-12" id="newArrival">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mt-12">
                 {
                     slicedProduct.map(product =>
                         <div key={product._id}>
@@ -192,7 +192,7 @@ return (
         {/* Guides Section */}
         <div className="container mx-auto px-4 py-[120px] border-t">
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
-                <div data-aos="fade-right" className="text-center">
+                <div data-aos="fade-up" className="text-center">
                     <figure className="w-[120px] md:w-[150px] mx-auto mb-3">
                         <img src="https://i.ibb.co/pfrRnSy/HIW1img-0a618bef4b830b5c682b.png" alt="" className="rounded-xl" />
                     </figure>
@@ -216,7 +216,7 @@ return (
                     <h1 className="text-base font-semibold text-orange-400 my-4">Fast shipping</h1>
                     <p className="text-sm font-medium max-w-[250px] mx-auto">The carrier will confirm and ship quickly to you</p>
                 </div>
-                <div data-aos="fade-left" className="text-center">
+                <div data-aos="fade-up" className="text-center">
                     <figure className="w-[120px] md:w-[150px] mx-auto mb-3">
                         <img src="https://i.ibb.co/j8xYgnr/HIW4img-c6a12d19e09f27d32678.png" alt="" className="rounded-xl" />
                     </figure>
