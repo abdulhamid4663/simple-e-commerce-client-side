@@ -13,7 +13,7 @@ const Electronics = () => {
             <Helmet>
                 <title>Diyafah || Electronics</title>
             </Helmet>
-            <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#0F172A]">Embrace Innovation with Electronics. <span className="text-[#6B7280]">Explore Our Tech Gadgets</span></h1>
+            <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-orange-400">Embrace Innovation with Electronics. <span className="text-[#6B7280]">Explore Our Tech Gadgets</span></h1>
 
             <div className="grid grid-cols-1 lg:grid-cols-4 gap-12 lg:gap-6 mt-[80px]">
                 <div className="lg:col-span-3">

@@ -13,7 +13,7 @@ const HomeKitchen = () => {
             <Helmet>
                 <title>Diyafah || Home & Kitchen</title>
             </Helmet>
-            <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#0F172A]">Upgrade Your Living Space with Home & Kitchen. <span className="text-[#6B7280]">Explore Our Essentials.</span></h1>
+            <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-orange-400">Upgrade Your Living Space with Home & Kitchen. <span className="text-[#6B7280]">Explore Our Essentials.</span></h1>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-6 mt-[80px]">
                 <div className="lg:col-span-3">

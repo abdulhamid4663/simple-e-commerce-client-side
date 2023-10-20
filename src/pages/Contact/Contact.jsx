@@ -13,7 +13,7 @@ const Contact = () => {
             <Helmet>
                 <title>Diyafah || Contact Us</title>
             </Helmet>
-            <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#0F172A]">Contact. <span className="text-[#6B7280]">Get in Touch</span></h1>
+            <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-orange-400">Contact. <span className="text-[#6B7280]">Get in Touch</span></h1>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-[80px]">
                 <div className="bg-orange-50 rounded-xl text-center py-10">
@@ -41,7 +41,7 @@ const Contact = () => {
 
             <div className="mt-[80px]">
                 <div className="text-center">
-                    <h1 className="text-[#0F172A] text-3xl font-semibold">Have Any Question?</h1>
+                    <h1 className="text-orange-400 text-3xl font-semibold">Have Any Question?</h1>
                     <p className="text-[#6B7280] text-base font-medium max-w-xl mx-auto mt-4">We&apos;re here to help! Feel free to reach out to us with any inquiries or concerns, and our team will get back to you as soon as possible.</p>
 
                     <div className="max-w-3xl mx-auto lg:px-4 border mt-6 rounded-2xl">

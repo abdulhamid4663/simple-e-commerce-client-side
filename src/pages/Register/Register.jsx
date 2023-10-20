@@ -166,12 +166,12 @@ const Register = () => {
     }
 
     return (
-        <div className="flex flex-col min-h-[800px] justify-center items-center px-4">
+        <div className="flex flex-col min-h-[900px] justify-center items-center px-4">
             <Helmet>
                 <title>Diyafah || Register</title>
             </Helmet>
             <div className="container mx-auto px-4 mb-7">
-                <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#0F172A] text-center">Register</h1>
+                <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-orange-400 text-center">Register</h1>
             </div>
             <div className="w-full lg:max-w-3xl border p-4 rounded-xl">
                 <form onSubmit={handleOnSubmit} className="card-body">
@@ -205,7 +205,7 @@ const Register = () => {
                     </button>
                 </div>
                 <div className="mt-7 text-center">
-                    <span className="text-[#0F172A] font-medium">Already have an account? <Link to="/login"><strong className="">Login</strong></Link></span>
+                    <span className="font-medium">Already have an account? <Link to="/login"><strong className="font-bold text-[#535863]">Login</strong></Link></span>
                 </div>
             </div>
         </div>

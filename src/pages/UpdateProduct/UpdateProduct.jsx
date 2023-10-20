@@ -53,7 +53,7 @@ const UpdateProduct = () => {
                 <title>Diyafah || Update Product</title>
             </Helmet>
             <div>
-                <h1 className="text-[#0F172A] text-4xl">Update Product</h1>
+                <h1 className="text-orange-400 text-4xl">Update Product</h1>
             </div>
             <div>
                 <form onSubmit={handleOnSubmit} className="card-body">

@@ -13,14 +13,14 @@ const ProductsCards = ({ product }) => {
             <div className="card-body">
                 <h2 className="card-title">{name.length > 50 ? name.slice(0, 50) + " ..." : name}</h2>
                 <p className='text-sm font-medium'>{description.length > 100 ? description.slice(0, 100) + " ..." : description}</p>
-                <p className='text-base text-[#0F172A] font-medium flex-grow'>Brand: <span className='font-normal'>{brand}</span></p>
+                <p className='text-base font-medium flex-grow'>Brand: <span className='font-normal text-[#6B7280]'>{brand}</span></p>
                 <div className='flex items-center justify-between'>
                     <div>
                         <p className='border-2 py-1 px-2 border-green-500 rounded-lg text-green-500 font-bold'>${price}</p>
                     </div>
                     <div className='flex items-center gap-1'>
                         <BiSolidStar className='text-yellow-500 text-xl' />
-                        <p className='text-lg font-semibold text-[#0F172A]'>{rating}</p>
+                        <p className='text-lg font-semibold text-[#6B7280]'>{rating}</p>
                     </div>
                 </div>
                 <div className="card-actions justify-between mt-6">

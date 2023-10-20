@@ -6,7 +6,6 @@ import Swal from "sweetalert2";
 const AddProduct = () => {
     const [value, setValue] = useState('')
 
-
     const handleOnSubmit = e => {
         e.preventDefault();
         const form = e.target;
@@ -51,7 +50,7 @@ const AddProduct = () => {
                 <title>Diyafah || Add Product</title>
             </Helmet>
             <div>
-                <h1 className="text-[#0F172A] text-4xl">Add Product</h1>
+                <h1 className={`text-orange-400 text-4xl`}>Add Product</h1>
             </div>
             <div>
                 <form onSubmit={handleOnSubmit} className="card-body">

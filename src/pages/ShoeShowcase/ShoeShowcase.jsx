@@ -13,7 +13,7 @@ const ShoeShowcase = () => {
             <Helmet>
                 <title>Diyafah || Shoe Collection</title>
             </Helmet>
-            <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#0F172A]">Step into Style with Shoes. <span className="text-[#6B7280]">Explore Our Footwear Collection</span></h1>
+            <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-orange-400">Step into Style with Shoes. <span className="text-[#6B7280]">Explore Our Footwear Collection</span></h1>
 
             <div className="grid grid-cols-1 lg:grid-cols-4 gap-12 lg:gap-6 mt-[80px]">
                 <div className="lg:col-span-3">

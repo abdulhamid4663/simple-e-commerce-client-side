@@ -99,12 +99,12 @@ const Login = () => {
     }
 
     return (
-        <div className="flex flex-col min-h-[700px] justify-center items-center">
+        <div className="flex flex-col min-h-[900px] justify-center items-center">
             <Helmet>
                 <title>Diyafah || Login</title>
             </Helmet>
             <div className="container mx-auto px-4 mb-7">
-                <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#0F172A] text-center">Login</h1>
+                <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-orange-400 text-center">Login</h1>
             </div>
             <div className="w-full lg:max-w-3xl border p-4 rounded-xl">
                 <form onSubmit={handleOnSubmit} className="card-body">
@@ -135,7 +135,7 @@ const Login = () => {
                     </button>
                 </div>
                 <div className="mt-7 text-center">
-                    <span className="text-[#0F172A] font-medium">Don&apos;t have an account? <Link to="/register"><strong className="">Register</strong></Link></span>
+                    <span className=" font-medium">Don&apos;t have an account? <Link to="/register"><strong className="font-bold text-[#535863]">Register</strong></Link></span>
                 </div>
             </div>
         </div>
