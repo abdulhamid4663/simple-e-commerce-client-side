@@ -12,7 +12,7 @@
 
 3- Authentication:
 
-- A user register in our website through the firebase authentication system it is safe and provides a good security 
+- A user register in our website through the firebase authentication system, it is safe and provides a good security 
 
 4- Product Categories:
 
