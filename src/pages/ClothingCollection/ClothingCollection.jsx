@@ -6,7 +6,6 @@ import SliderComponent from "../../components/SliderComponent/SliderComponent";
 const ClothingCollection = () => {
     const loadedProducts = useLoaderData()
     const filterProducts = loadedProducts.filter(product => product?.type === "Clothing")
-    console.log(filterProducts)
     return (
         <div className="container mx-auto px-4 my-[120px]">
             <Helmet>

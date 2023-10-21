@@ -63,7 +63,6 @@ const SliderComponent = () => {
       .then(data => setProducts(data))
   }, [])
 
-  console.log(products)
   return (
     <>
       <div className="my-[120px] pt-[80px] border-t">
