@@ -1,5 +1,4 @@
-Introduction:
-  Developed a sophisticated e-commerce platform.
+Developed a sophisticated e-commerce platform with a focus on user-friendly features.
 
 Key Features:
 - Seamlessly switch between dark/light mode.
