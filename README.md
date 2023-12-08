@@ -18,6 +18,4 @@ Product Categories:
 - Electronics: Cutting-edge tech solutions.
 - Gaming Accessories: Optimal items for gaming setups.
 
-Getting Started:
-  Explore the demo at https://diyafah-auth.web.app
-  Your feedback is greatly appreciated.
+Explore the demo at https://diyafah-auth.web.app.
